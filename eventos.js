@@ -1,13 +1,11 @@
 var estado = 0;
 var modoDeDibujo = 0;
-var tipoDeEvento = "";
 
 var botonLibre = document.getElementById("botoncitoLibre");
 botonLibre.addEventListener("click", dibujoLibre);
-var botonClick = document.getElementById("botoncitoClick");
-botonClick.addEventListener("click", dibujoClick);
 
-document.addEventListener(tipoDeEvento, dibujarTeclado);
+
+document.addEventListener("mousemove", dibujarTeclado);
 
 document.addEventListener("mousedown",presionarMouse);  
 document.addEventListener("mouseup",soltarMouse);   
@@ -56,10 +54,4 @@ function soltarMouse(evento) {
 
 function dibujoLibre() {
     modoDeDibujo = 2;
-    tipoDeEvento = "mousemove"
-}
-
-function dibujoClick() {
-    modoDeDibujo = 3;
-    tipoDeEvento = "mousemove"
 }
