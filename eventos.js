@@ -3,10 +3,10 @@ var modoDeDibujo = 0;
 
 var botonLibre = document.getElementById("botoncitoLibre");
 botonLibre.addEventListener("click", dibujoLibre);
-
+var botonMano = document.getElementById("botoncitoMano");
+botonMano.addEventListener("click", dibujoMano);
 
 document.addEventListener("mousemove", dibujarTeclado);
-
 document.addEventListener("mousedown",presionarMouse);  
 document.addEventListener("mouseup",soltarMouse);   
 var cuadrito = document.getElementById("area_de_dibujo");
@@ -53,5 +53,9 @@ function soltarMouse(evento) {
 }
 
 function dibujoLibre() {
+    modoDeDibujo = 2;
+}
+
+function dibujoMano() {
     modoDeDibujo = 2;
 }
