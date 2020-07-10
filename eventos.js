@@ -9,7 +9,7 @@ botonClick.addEventListener("click", dibujoClick);
 var botonMano = document.getElementById("botoncitoMano");
 botonMano.addEventListener("click", dibujoMano);
 
-document.addEventListener("touch", dibujarTeclado);
+document.addEventListener("touchmove", dibujarTeclado);
 //document.addEventListener("mousedown",presionarMouse);  
 //document.addEventListener("mouseup",soltarMouse);   
 var cuadrito = document.getElementById("area_de_dibujo");
